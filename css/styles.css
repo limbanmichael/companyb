@@ -29,3 +29,34 @@
   font-family: 'myFirstFont';
   font-size: 30px;
 }
+
+.footer-b {
+  height: 200px;
+}
+
+.nav-foot {
+  height: 100%;
+}
+
+/* nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+  line-height: 33px;
+} */
+.footer-link {
+  display: block;
+  line-height: 33px;
+}
+.footer-link > a {
+  cursor: pointer;
+  font-family: 'myFirstFont';
+  font-size: 25px;
+}
+
+.web-page {
+  font-family: 'myFirstFont';
+  font-size: 30px;
+  color: black;
+}
+body > div.ng-scope > div.footer-b > nav > div > div:nth-child(1) > div {
+  font-family: 'myFirstFont';
+  font-size: 40px;
+}
