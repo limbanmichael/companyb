@@ -430,10 +430,26 @@ var myApp = angular
           }
         });
 $(document).ready(function(){
+  $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 240
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: false // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
+  $('.product-collapse').collapsible();
+
   $('.carousel').carousel({
-    duration: 1000
+    duration: 1000,
+    closeOnClick: true
   });
+
   $("#homeCarousel").click(function(){
+    $('.carousel').carousel({
+      duration: 1000
+    });
+  });
+
+  $("#homeCarouselMobile").click(function(){
     $('.carousel').carousel({
       duration: 1000
     });

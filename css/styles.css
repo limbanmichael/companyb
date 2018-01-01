@@ -31,31 +31,19 @@
 }
 
 .footer-b {
-<<<<<<< Updated upstream
   height: 200px;
-=======
-  height: 150px;
->>>>>>> Stashed changes
 }
 
 .nav-foot {
   height: 100%;
 }
 
-/* <<<<<<< Updated upstream */
 /* nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   line-height: 33px;
 } */
-/* .footer-link {
-  display: block;
-  line-height: 33px;
-======= */
-nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
-  line-height: 33px;
-}
 .footer-link {
   display: block;
-/* >>>>>>> Stashed changes */
+  line-height: 33px;
 }
 .footer-link > a {
   cursor: pointer;
@@ -71,4 +59,58 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
 body > div.ng-scope > div.footer-b > nav > div > div:nth-child(1) > div {
   font-family: 'myFirstFont';
   font-size: 40px;
+}
+
+.footer-logo {
+  bottom: 35%;
+}
+
+ul#slide-out {
+  position: relative;
+  background-color: white;
+}
+
+#slide-out > li {
+  float: none !important;
+}
+#slide-out > li > a {
+  color: #489386;
+}
+
+@media screen and (max-width: 667px) {
+  .footer-b {
+    height: 100%;
+  }
+  .nav-foot {
+    height: 100%;
+  }
+  .row .col.s3 {
+    width: 100%;
+  }
+  .footer-logo {
+    position: unset !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #dropdown1, #navBarFixed {
+    display: none;
+  }
+  #menuDropDown {
+    display: block;
+  }
+  .mobile-logo {
+    top: 0;
+    font-family: 'myFirstFont';
+    font-size: 50px !important;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  #dropdown1, #navBarFixed {
+    display: block;
+  }
+  #menuDropDown {
+    display: none;
+  }
 }

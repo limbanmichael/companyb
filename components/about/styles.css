@@ -1,0 +1,12 @@
+.about-holder > .about-text {
+  font-family: 'myFirstFont';
+  font-size: 40px;
+  color: #52a79a;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.about-holder > h3 {
+  font-family: 'myFirstFont';
+  font-size: 60px;
+}

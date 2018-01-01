@@ -11,22 +11,40 @@
   <body ng-app="myApp">
     <div ng-controller="myController">
       <div class="header">
+        <!-- mobile menu -->
+      <nav id="menuDropDown">
+        <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+        <a href="#!" class="brand-logo right mobile-logo">Company B</a>
+        <ul id="slide-out" class="side-nav z-depth-5">
+          <li class="{{home}}" ng-click="navBar('home')" id="homeCarouselMobile"><a href="#">Home</a></li>
+          <li class="{{about}}" ng-click="navBar('about')"><a href="#">About</a></li>
+          <li class="{{product}} product-collapse" ng-click="navBar('product')"><a class="dropdown-button" href="#!" data-activates="dropdown1">Product<i class="material-icons right"></i></a></li>
+          <li class="{{contact}}" ng-click="navBar('contact')"><a href="#">Contact</a></li>
+        </ul>
         <ul id="dropdown1" class="dropdown-content">
           <li ng-click="navBar('shoes')" class="prod-sub"><a href="#!">Shoes</a></li>
           <li ng-click="navBar('pants')" class="prod-sub"><a href="#!">Pants</a></li>
           <li ng-click="navBar('shirts')" class="prod-sub"><a href="#!">Shirts</a></li>
         </ul>
-          <nav class="navbar-fixed">
-            <div class="nav-wrapper">
-              <a href="#!" class="brand-logo left">Company B</a>
-              <ul class="right hide-on-med-and-down">
-                <li class="{{home}}" ng-click="navBar('home')" id="homeCarousel"><a href="#">Home</a></li>
-                <li class="{{about}}" ng-click="navBar('about')"><a href="#">About</a></li>
-                <li class="{{product}}" ng-click="navBar('product')"><a class="dropdown-button" href="#!" data-activates="dropdown1">Product<i class="material-icons right"></i></a></li>
-                <li class="{{contact}}" ng-click="navBar('contact')"><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </nav>
+      </nav>
+
+      <!-- desktop menu -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li ng-click="navBar('shoes')" class="prod-sub"><a href="#!">Shoes</a></li>
+        <li ng-click="navBar('pants')" class="prod-sub"><a href="#!">Pants</a></li>
+        <li ng-click="navBar('shirts')" class="prod-sub"><a href="#!">Shirts</a></li>
+      </ul>
+      <nav class="navbar-fixed"  id="navBarFixed">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo left">Company B</a>
+          <ul class="right hide-on-med-and-down">
+            <li class="{{home}}" ng-click="navBar('home')" id="homeCarousel"><a href="#">Home</a></li>
+            <li class="{{about}}" ng-click="navBar('about')"><a href="#">About</a></li>
+            <li class="{{product}}" ng-click="navBar('product')"><a class="dropdown-button" href="#!" data-activates="dropdown1">Product<i class="material-icons right"></i></a></li>
+            <li class="{{contact}}" ng-click="navBar('contact')"><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
       </div>
       <div class="body-b row">
         <home
@@ -95,20 +113,19 @@
         <nav class="navbar-fixed nav-foot">
           <div class="nav-wrapper row">
             <div class="col s3">
-              <div class="brand-logo left">Company B</div>
+              <div class="brand-logo left footer-logo">Company B</div>
             </div>
             <div class="col s3">
               <div class="web-page">Website Pages</div>
-              <li class="footer-link"><a>Home</a></li>
-              <li class="footer-link"><a>About</a></li>
-              <li class="footer-link"><a>Contact</a></li>
+              <li class="footer-link {{home}}" ng-click="navBar('home')" id="homeCarousel"><a>Home</a></li>
+              <li class="footer-link {{about}}" ng-click="navBar('about')"><a>About</a></li>
+              <li class="footer-link {{contact}}" ng-click="navBar('contact')"><a>Contact</a></li>
             </div>
-<!-- <<<<<<< Updated upstream -->
             <div class="col s3">
               <div class="web-page">Products</div>
-              <li class="footer-link"><a>Shoes</a></li>
-              <li class="footer-link"><a>Pants</a></li>
-              <li class="footer-link"><a>Shirts</a></li>
+              <li class="footer-link" ng-click="navBar('shoes')"><a>Shoes</a></li>
+              <li class="footer-link" ng-click="navBar('pants')"><a>Pants</a></li>
+              <li class="footer-link" ng-click="navBar('shirts')"><a>Shirts</a></li>
             </div>
             <div class="col s3">
               <div class="web-page">Connect<a class="material-icons small">email</a></div>
@@ -122,8 +139,6 @@
               </div>
             </div>
           </div>
-<!-- ======= -->
-<!-- >>>>>>> Stashed changes -->
           </div>
         </nav>
       </div>
