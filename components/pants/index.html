@@ -1,0 +1,56 @@
+<a class="waves-effect waves-light btn" ng-click="showMale()"><i class="material-icons left">shopping_cart</i>Male</a>
+<a class="waves-effect waves-light btn" ng-click="showFemale()"><i class="material-icons left">shopping_cart</i>Female</a>
+<a class="waves-effect waves-light btn" ng-click="showKids()"><i class="material-icons left">shopping_cart</i>Kids</a>
+</div>
+
+
+<div class="row" ng-if="femPants">
+  <div class="col s2 m2" ng-repeat="item in imageHolderFem track by $index">
+  <div class="card">
+    <div class="card-image">
+      <img src="{{item.image}}">
+      <span class="card-title">{{item.title}}</span>
+    </div>
+    <div class="card-content">
+      <p>{{item.content}}</p>
+    </div>
+    <div class="card-action">
+      <a class="waves-effect waves-light btn"><i class="material-icons left"></i>Buy me</a>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="row" ng-if="malePants">
+  <div class="col s2 m2" ng-repeat="item in imageHolderMale track by $index">
+  <div class="card">
+    <div class="card-image">
+      <img src="{{item.image}}">
+      <span class="card-title">{{item.title}}</span>
+    </div>
+    <div class="card-content">
+      <p>{{item.content}}</p>
+    </div>
+    <div class="card-action">
+      <a class="waves-effect waves-light btn"><i class="material-icons left"></i>Buy me</a>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="row" ng-if="kidsPants">
+  <div class="col s2 m2" ng-repeat="item in imageHolderKids track by $index">
+  <div class="card">
+    <div class="card-image">
+      <img src="{{item.image}}">
+      <span class="card-title">{{item.title}}</span>
+    </div>
+    <div class="card-content">
+      <p>{{item.content}}</p>
+    </div>
+    <div class="card-action">
+      <a class="waves-effect waves-light btn"><i class="material-icons left"></i>Buy me</a>
+    </div>
+  </div>
+  </div>
+</div>

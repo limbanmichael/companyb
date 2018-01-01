@@ -1,0 +1,31 @@
+
+@import '../components/styles.css';
+@font-face {
+    font-family: 'myFirstFont';
+    src: url('../fonts/Wendy-LP-Bold.ttf');
+}
+
+.carousel .carousel-item {
+    visibility: visible;
+  }
+
+.carousel-holder > .kids-carousel, .women-carousel, .men-carousel > p {
+  font-family: 'myFirstFont';
+  font-size: 60px;
+  text-align: center;
+  vertical-align: middle;
+  color: #52a79a;
+}
+.header > .navbar-fixed > .nav-wrapper > .brand-logo {
+  font-family: 'myFirstFont';
+  font-size: 50px;
+}
+
+.header > .navbar-fixed > .nav-wrapper > .hide-on-med-and-down > li > a{
+  font-family: 'myFirstFont';
+  font-size: 30px;
+}
+.dropdown-content li > a, .dropdown-content li>span {
+  font-family: 'myFirstFont';
+  font-size: 30px;
+}

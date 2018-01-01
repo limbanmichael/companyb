@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="frameworks/angular.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.4/angular.min.js"></script> -->
+    <link rel="stylesheet" href="frameworks/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="myController">
+      <div class="header">
+        <ul id="dropdown1" class="dropdown-content">
+          <li ng-click="navBar('shoes')" class="prod-sub"><a href="#!">Shoes</a></li>
+          <li ng-click="navBar('pants')" class="prod-sub"><a href="#!">Pants</a></li>
+          <li ng-click="navBar('shirts')" class="prod-sub"><a href="#!">Shirts</a></li>
+        </ul>
+          <nav class="navbar-fixed">
+            <div class="nav-wrapper">
+              <a href="#!" class="brand-logo left">Company B</a>
+              <ul class="right hide-on-med-and-down">
+                <li class="{{home}}" ng-click="navBar('home')" id="homeCarousel"><a href="#">Home</a></li>
+                <li class="{{about}}" ng-click="navBar('about')"><a href="#">About</a></li>
+                <li class="{{product}}" ng-click="navBar('product')"><a class="dropdown-button" href="#!" data-activates="dropdown1">Product<i class="material-icons right"></i></a></li>
+                <li class="{{contact}}" ng-click="navBar('contact')"><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+      </div>
+      <div class="body-b row">
+        <home
+          class="home-b"
+          ng-if="homeComponent"
+        >
+        </home>
+        <about
+          class="about-b"
+          ng-if="aboutComponent"
+        >
+      </about>
+      <shoes
+        class="shoes-b"
+        ng-if="shoesComponent"
+      ></shoes>
+      <pants
+        class="pants-b"
+        ng-if="pantsComponent"
+      ></pants>
+      <shirts
+        class="shirts-b"
+        ng-if="shirtsComponent"
+      ></shirts>
+      <contact
+        class="contact-b"
+        ng-if="contactComponent"
+      ></contact>
+      </div>
+      <!-- <div class="footer-b">
+        <nav class="navbar-fixed">
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo center">Company B</a>
+          </div>
+        </nav>
+      </div> -->
+      <div class="carousel-holder" ng-if="homeComponent">
+        <div class="kids-carousel">
+          <p>Best Seller for Kids</p>
+        </div>
+        <div class="carousel">
+          <a class="carousel-item" href="#one!"><img src="./assets/kids/shirts/1.jpg"></a>
+          <a class="carousel-item" href="#two!"><img src="./assets/kids/shirts/2.jpg"></a>
+          <a class="carousel-item" href="#three!"><img src="./assets/kids/shirts/3.jpg"></a>
+          <a class="carousel-item" href="#four!"><img src="./assets/kids/pants/1.jpg"></a>
+          <a class="carousel-item" href="#five!"><img src="./assets/kids/pants/2.jpg"></a>
+          <a class="carousel-item" href="#five!"><img src="./assets/kids/pants/3.jpg"></a>
+        </div>
+        <div class="men-carousel">
+          <p>Best Seller for Men</p>
+        </div>
+        <div class="carousel">
+          <a class="carousel-item" href="#one!"><img src="./assets/men/pants/1.jpg"></a>
+          <a class="carousel-item" href="#two!"><img src="./assets/men/pants/2.jpg"></a>
+          <a class="carousel-item" href="#three!"><img src="./assets/men/pants/3.jpg"></a>
+          <a class="carousel-item" href="#four!"><img src="./assets/men/shoes/1.jpg"></a>
+          <a class="carousel-item" href="#five!"><img src="./assets/men/shoes/2.jpg"></a>
+          <a class="carousel-item" href="#five!"><img src="./assets/men/shoes/3.jpg"></a>
+        </div>
+        <div class="women-carousel">
+          <p>Best Seller for Women</p>
+        </div>
+        <div class="carousel">
+          <a class="carousel-item" href="#one!"><img src="./assets/women/pants/1.jpg"></a>
+          <a class="carousel-item" href="#two!"><img src="./assets/women/pants/2.jpg"></a>
+          <a class="carousel-item" href="#three!"><img src="./assets/women/pants/3.jpg"></a>
+          <a class="carousel-item" href="#four!"><img src="./assets/women/shoes/1.jpg"></a>
+          <a class="carousel-item" href="#five!"><img src="./assets/women/shoes/2.jpg"></a>
+          <a class="carousel-item" href="#five!"><img src="./assets/women/shoes/3.jpg"></a>
+        </div>
+      </div>
+    </div>
+    <script src="frameworks/jquery.min.js"></script>
+    <script src="frameworks/materialize.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
+<!-- <html>
+  <head>
+      <title>Minimal example</title>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+
+  </head>
+  <body ng-app="myApp">
+  <main ng-controller="myController">
+    <div class="row">
+    <div class="col s12">
+        <ul tabs reload="allTabContentLoaded">
+            <li class="tab col s3"><a href="#test1">Test 1</a></li>
+            <li class="tab col s3"><a class="active" href="#test2">Test 2</a></li>
+            <li class="tab col s3"><a href="#test3">Test 3</a></li>
+            <li class="tab col s3"><a href="#test4">Test 4</a></li>
+        </ul>
+    </div>
+    <div id="test1" class="col s12">Test 1</div>
+    <div id="test2" class="col s12">Test 2</div>
+    <div id="test3" class="col s12">Test 3</div>
+    <div id="test4" class="col s12">Test 4</div>
+  </div>
+  </main>
+  <script src="js/index.js"></script>
+  </body>
+</html> -->

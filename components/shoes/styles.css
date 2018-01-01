@@ -1,0 +1,22 @@
+/* @import '.../css/styles.css'; */
+men > div > div.z-depth-4 {
+  display: inline;
+  /* background-color: green; */
+}
+.row .col.s2 {
+  width: 162px;
+}
+.row > .col.s2.m2 > .card > .card-content > p {
+  font-family: 'myFirstFont';
+  font-size: 30px;
+}
+
+.card .card-image .card-title {
+  font-family: 'myFirstFont';
+  font-size: 30px;
+}
+
+.waves-effect {
+  font-family: 'myFirstFont';
+  font-size: 25px;
+}
