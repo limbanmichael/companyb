@@ -10,14 +10,18 @@
       <li><a class="btn-floating blue"><i class="material-icons large">attach_file</i></a></li>
     </ul>
   </div> -->
-  <div class="row">
-    <a class="waves-effect waves-light btn" ng-click="showMale()"><i class="material-icons left">shopping_cart</i>Male</a>
-    <a class="waves-effect waves-light btn" ng-click="showFemale()"><i class="material-icons left">shopping_cart</i>Female</a>
-    <a class="waves-effect waves-light btn" ng-click="showKids()"><i class="material-icons left">shopping_cart</i>Kids</a>
+  <div class="row sub-menu">
+    <a class="waves-effect waves-light btn btn-floating menu-one" ng-click="showMale()"><i class="material-icons left">face</i>Male</a>
+    <a class="waves-effect waves-light btn btn-floating menu-one" ng-click="showFemale()"><i class="material-icons left">pregnant_woman</i>Female</a>
+    <a class="waves-effect waves-light btn btn-floating menu-one" ng-click="showKids()"><i class="material-icons left">child_care</i>Kids</a>
+
+    <a class="waves-effect waves-light btn menu-two" ng-click="showMale()"><i class="material-icons left">face</i>Male</a>
+    <a class="waves-effect waves-light btn menu-two" ng-click="showFemale()"><i class="material-icons left">pregnant_woman</i>Female</a>
+    <a class="waves-effect waves-light btn menu-two" ng-click="showKids()"><i class="material-icons left">child_care</i>Kids</a>
   </div>
 
 
-<div class="row" ng-if="maleShoes">
+<div class="row row-pad" ng-if="maleShoes">
   <div class="col s2 m2" ng-repeat="item in imageHolder track by $index">
     <div class="card">
       <div class="card-image">
@@ -34,7 +38,7 @@
   </div>
 </div>
 
-<div class="row" ng-if="femaleShoes">
+<div class="row row-pad" ng-if="femaleShoes">
   <div class="col s2 m2" ng-repeat="item in imageHolderFem track by $index">
     <div class="card">
       <div class="card-image">
@@ -51,7 +55,7 @@
   </div>
 </div>
 
-<div class="row" ng-if="kidShoes">
+<div class="row row-pad" ng-if="kidShoes">
   <div class="col s2 m2" ng-repeat="item in imageHolderKids track by $index">
     <div class="card">
       <div class="card-image">

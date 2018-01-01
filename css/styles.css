@@ -28,6 +28,7 @@
 .dropdown-content li > a, .dropdown-content li>span {
   font-family: 'myFirstFont';
   font-size: 30px;
+  text-indent: 35px;
 }
 
 .footer-b {
@@ -68,6 +69,7 @@ body > div.ng-scope > div.footer-b > nav > div > div:nth-child(1) > div {
 ul#slide-out {
   position: relative;
   background-color: white;
+  z-index: 99;
 }
 
 #slide-out > li {
@@ -75,9 +77,29 @@ ul#slide-out {
 }
 #slide-out > li > a {
   color: #489386;
+  font-family: myFirstFont;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 668px) {
+  .sub-menu > .menu-two {
+    display: inline-block;
+  }
+  .sub-menu > .menu-one {
+    display: none;
+  }
+  /* .row .col.s2 {
+    width: 16.6666666667%;
+  } */
 }
 
 @media screen and (max-width: 667px) {
+  .sub-menu > .menu-one {
+    display: inline-block;
+  }
+  .sub-menu > .menu-two {
+    display: none;
+  }
   .footer-b {
     height: 100%;
   }
@@ -92,7 +114,16 @@ ul#slide-out {
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max  -width: 802px) {
+  .row .col.s2 {
+      width: 199px !important;
+  }
+  #navBarFixed {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 891px) {
   #dropdown1, #navBarFixed {
     display: none;
   }
@@ -104,13 +135,36 @@ ul#slide-out {
     font-family: 'myFirstFont';
     font-size: 50px !important;
   }
+  .row .col.s2 {
+    width: 199px;
+  }
 }
 
-@media screen and (min-width: 993px) {
+/* @media only screen and (max-width: 992px){
+
+  .hide-on-med-and-down {
+    display: block;
+  }
+} */
+
+@media screen and (min-width: 892px) {
+  .row .col.s2 {
+      width: 199px !important;
+  }
+  .right.hide-on-med-and-down {
+    display: block !important;
+  }
   #dropdown1, #navBarFixed {
     display: block;
   }
   #menuDropDown {
     display: none;
   }
+}
+nav ul li.active {
+  max-height: 65px;
+}
+
+.row-pad {
+  padding-top: 40px;
 }

@@ -14,7 +14,7 @@
         <!-- mobile menu -->
       <nav id="menuDropDown">
         <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
-        <a href="#!" class="brand-logo right mobile-logo">Company B</a>
+        <a href="#!" class="brand-logo right mobile-logo" ng-click="navBar('home')">Company B</a>
         <ul id="slide-out" class="side-nav z-depth-5">
           <li class="{{home}}" ng-click="navBar('home')" id="homeCarouselMobile"><a href="#">Home</a></li>
           <li class="{{about}}" ng-click="navBar('about')"><a href="#">About</a></li>
@@ -36,7 +36,7 @@
       </ul>
       <nav class="navbar-fixed"  id="navBarFixed">
         <div class="nav-wrapper">
-          <a href="#!" class="brand-logo left">Company B</a>
+          <a href="#!" class="brand-logo left" ng-click="navBar('home')">Company B</a>
           <ul class="right hide-on-med-and-down">
             <li class="{{home}}" ng-click="navBar('home')" id="homeCarousel"><a href="#">Home</a></li>
             <li class="{{about}}" ng-click="navBar('about')"><a href="#">About</a></li>
@@ -86,7 +86,7 @@
           <a class="carousel-item" href="#five!"><img src="./assets/kids/pants/2.jpg"></a>
           <a class="carousel-item" href="#five!"><img src="./assets/kids/pants/3.jpg"></a>
         </div>
-        <!-- <div class="women-carousel">
+        <div class="women-carousel">
           <p>Best Seller for Women</p>
         </div>
         <div class="carousel">
@@ -107,13 +107,13 @@
           <a class="carousel-item" href="#four!"><img src="./assets/men/shoes/1.jpg"></a>
           <a class="carousel-item" href="#five!"><img src="./assets/men/shoes/2.jpg"></a>
           <a class="carousel-item" href="#five!"><img src="./assets/men/shoes/3.jpg"></a>
-        </div> -->
+        </div>
       </div>
       <div class="footer-b">
         <nav class="navbar-fixed nav-foot">
           <div class="nav-wrapper row">
-            <div class="col s3">
-              <div class="brand-logo left footer-logo">Company B</div>
+            <div class="col s3" ng-click="navBar('home')">
+              <div class="brand-logo left footer-logo" ng-click="navBar('home')">Company B</div>
             </div>
             <div class="col s3">
               <div class="web-page">Website Pages</div>
@@ -132,11 +132,11 @@
 
               <li class="footer-link"><a>support@companyb.com</a></li>
               <li class="footer-link"><a>Subscribe to NewsLetter</a></li>
-              <div class="input-field col s12">
+              <!-- <div class="input-field col s12">
                 <i class="material-icons prefix">email</i>
                 <input id="icon_telephone" type="tel" class="validate">
                 <label for="icon_telephone">Email</label>
-              </div>
+              </div> -->
             </div>
           </div>
           </div>
@@ -148,34 +148,3 @@
     <script src="js/index.js"></script>
   </body>
 </html>
-<!-- <html>
-  <head>
-      <title>Minimal example</title>
-
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
-
-  </head>
-  <body ng-app="myApp">
-  <main ng-controller="myController">
-    <div class="row">
-    <div class="col s12">
-        <ul tabs reload="allTabContentLoaded">
-            <li class="tab col s3"><a href="#test1">Test 1</a></li>
-            <li class="tab col s3"><a class="active" href="#test2">Test 2</a></li>
-            <li class="tab col s3"><a href="#test3">Test 3</a></li>
-            <li class="tab col s3"><a href="#test4">Test 4</a></li>
-        </ul>
-    </div>
-    <div id="test1" class="col s12">Test 1</div>
-    <div id="test2" class="col s12">Test 2</div>
-    <div id="test3" class="col s12">Test 3</div>
-    <div id="test4" class="col s12">Test 4</div>
-  </div>
-  </main>
-  <script src="js/index.js"></script>
-  </body>
-</html> -->
