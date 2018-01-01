@@ -31,19 +31,31 @@
 }
 
 .footer-b {
+<<<<<<< Updated upstream
   height: 200px;
+=======
+  height: 150px;
+>>>>>>> Stashed changes
 }
 
 .nav-foot {
   height: 100%;
 }
 
+/* <<<<<<< Updated upstream */
 /* nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   line-height: 33px;
 } */
-.footer-link {
+/* .footer-link {
   display: block;
   line-height: 33px;
+======= */
+nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+  line-height: 33px;
+}
+.footer-link {
+  display: block;
+/* >>>>>>> Stashed changes */
 }
 .footer-link > a {
   cursor: pointer;
